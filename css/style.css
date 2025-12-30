@@ -14335,3 +14335,61 @@ input:focus, textarea:focus, select:focus {
   background-color: var(--primary-color) !important;
   border-color: var(--primary-color) !important;
 }
+/* Hero Section Button Fixes */
+#section-hero .btn-main {
+  position: relative;
+  overflow: visible;
+  z-index: 2;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+}
+
+#section-hero .btn-main span {
+  position: relative;
+  z-index: 3;
+  display: block;
+  transition: all 0.3s ease;
+  opacity: 1 !important;
+  transform: none !important;
+}
+
+#section-hero .btn-main:hover span {
+  opacity: 1 !important;
+  transform: none !important;
+  color: white !important;
+}
+
+#section-hero .btn-main:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 30px rgba(var(--primary-color-rgb), 0.4);
+}
+
+#section-hero .btn-main.btn-line {
+  background: transparent;
+  border: 2px solid var(--primary-color);
+  color: var(--primary-color);
+}
+
+#section-hero .btn-main.btn-line:hover {
+  background: var(--primary-color);
+  color: white;
+}
+
+#section-hero .btn-main.btn-line span {
+  color: inherit;
+}
+
+/* Ensure text visibility on all button states */
+.btn-main span {
+  opacity: 1 !important;
+  visibility: visible !important;
+  transform: none !important;
+}
+
+.btn-main:hover span {
+  opacity: 1 !important;
+  visibility: visible !important;
+  transform: none !important;
+}
