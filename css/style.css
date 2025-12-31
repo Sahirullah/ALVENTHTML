@@ -14439,12 +14439,17 @@ input:focus, textarea:focus, select:focus {
 }
 
 /* Enhanced Ticket Cards Styling */
+#section-tickets .owl-carousel {
+  padding-bottom: 50px;
+}
+
 #section-tickets .owl-carousel .item {
   display: flex;
   flex-direction: column;
-  height: 100%;
-  min-height: 700px;
+  height: auto;
+  min-height: 800px;
   transition: all 0.3s ease;
+  margin-bottom: 20px;
 }
 
 #section-tickets .item {
@@ -14526,9 +14531,9 @@ input:focus, textarea:focus, select:focus {
   display: flex;
   flex-direction: column;
   flex-grow: 1;
-  padding: 30px;
+  padding: 40px 30px 30px;
   justify-content: space-between;
-  min-height: 350px;
+  min-height: 420px;
 }
 
 #section-tickets .item .py-4 {
@@ -14634,7 +14639,7 @@ input:focus, textarea:focus, select:focus {
 /* Responsive adjustments */
 @media (max-width: 768px) {
   #section-tickets .owl-carousel .item {
-    min-height: 600px;
+    min-height: 680px;
   }
   
   #section-tickets .d-ticket {
@@ -14648,6 +14653,11 @@ input:focus, textarea:focus, select:focus {
   #section-tickets .d-ticket h4 {
     font-size: 40px;
   }
+  
+  #section-tickets .item > div:last-child {
+    padding-bottom: 50px;
+  }
+}
   
   #section-tickets .item > div:last-child {
     padding: 20px;
@@ -14802,7 +14812,7 @@ input:focus, textarea:focus, select:focus {
 
 #section-tickets .owl-carousel .item {
   height: 100%;
-  min-height: 720px;
+  min-height: 750px;
 }
 
 /* Ensure all cards have exactly the same structure */
