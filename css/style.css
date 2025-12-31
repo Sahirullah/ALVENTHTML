@@ -12022,24 +12022,40 @@ img {
 .d-ticket{
   position: relative;
   overflow: hidden;
-  padding: 30px;
-  background: url('../images/misc/l3.webp');
+  padding: 40px 30px 30px;
+  background: linear-gradient(135deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.05) 100%);
   border-radius: var(--rounded-1);
   -moz-border-radius: var(--rounded-1);
   -webkit-border-radius: var(--rounded-1);
-  -webkit-box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 1);
-  -moz-box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 1);
-  box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 1);
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+  text-align: center;
 }
 .d-ticket.s2{
-  background: url('../images/misc/l4.webp');
+  background: linear-gradient(135deg, rgba(var(--primary-color-rgb), 0.15) 0%, rgba(var(--primary-color-rgb), 0.08) 100%);
 }
 .d-ticket.s3{
-  background: url('../images/misc/l5.webp');
+  background: linear-gradient(135deg, rgba(255, 107, 107, 0.15) 0%, rgba(255, 107, 107, 0.08) 100%);
 }
 .d-ticket h2{
-  font-size: 36px;
-  margin: 0;
+  font-size: 32px;
+  font-weight: 700;
+  margin: 0 0 10px 0;
+  background: linear-gradient(135deg, #ffffff 0%, var(--primary-color) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.d-ticket h4 {
+  font-size: 48px;
+  font-weight: 800;
+  color: var(--primary-color);
+  margin-bottom: 15px;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
+.d-ticket .fs-14 {
+  color: rgba(255,255,255,0.8);
+  font-weight: 500;
+  letter-spacing: 0.5px;
 }
 
 /* ================================================== */
@@ -14392,4 +14408,413 @@ input:focus, textarea:focus, select:focus {
   opacity: 1 !important;
   visibility: visible !important;
   transform: none !important;
+}
+/* Ticket Cards Button Alignment Fix */
+.owl-carousel .item {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.owl-carousel .item > div {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.owl-carousel .item .relative {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-bottom: 20px;
+}
+
+.owl-carousel .item .py-4 {
+  flex: 1;
+}
+
+.owl-carousel .item .ul-check {
+  margin-bottom: 20px;
+}
+
+/* Enhanced Ticket Cards Styling */
+#section-tickets .owl-carousel .item {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  min-height: 700px;
+  transition: all 0.3s ease;
+}
+
+#section-tickets .item {
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  background: linear-gradient(145deg, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0.02) 100%);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255,255,255,0.1);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+  transform: translateY(0);
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+#section-tickets .item:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 30px 60px rgba(0,0,0,0.4);
+  border-color: var(--primary-color);
+}
+
+/* Featured card (Visionary) styling */
+#section-tickets .item:nth-child(3) {
+  border: 2px solid var(--primary-color);
+  background: linear-gradient(145deg, rgba(var(--primary-color-rgb), 0.1) 0%, rgba(var(--primary-color-rgb), 0.05) 100%);
+  position: relative;
+}
+
+#section-tickets .item:nth-child(3)::before {
+  content: "MOST POPULAR";
+  position: absolute;
+  top: 20px;
+  right: -30px;
+  background: var(--primary-color);
+  color: white;
+  padding: 8px 40px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  transform: rotate(45deg);
+  z-index: 10;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+/* Ticket header improvements */
+#section-tickets .d-ticket {
+  position: relative;
+  padding: 40px 30px 30px;
+  background: linear-gradient(135deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.05) 100%);
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+  text-align: center;
+}
+
+#section-tickets .d-ticket h2 {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  background: linear-gradient(135deg, #ffffff 0%, var(--primary-color) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+#section-tickets .d-ticket h4 {
+  font-size: 48px;
+  font-weight: 800;
+  color: var(--primary-color);
+  margin-bottom: 15px;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
+
+#section-tickets .d-ticket .fs-14 {
+  color: rgba(255,255,255,0.8);
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+
+/* Content section improvements */
+#section-tickets .item > div:last-child {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  padding: 30px;
+  justify-content: space-between;
+  min-height: 350px;
+}
+
+#section-tickets .item .py-4 {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 0 !important;
+  min-height: 250px;
+}
+}
+
+/* Enhanced feature list styling */
+#section-tickets .item .ul-check {
+  flex-grow: 1;
+  margin-bottom: 30px !important;
+  padding: 0;
+  list-style: none;
+  min-height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+#section-tickets .item .ul-check li {
+  position: relative;
+  padding: 12px 0 12px 35px;
+  color: rgba(255,255,255,0.9);
+  font-size: 15px;
+  line-height: 1.6;
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+  transition: all 0.3s ease;
+}
+
+#section-tickets .item .ul-check li:last-child {
+  border-bottom: none;
+}
+
+#section-tickets .item .ul-check li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  top: 12px;
+  width: 20px;
+  height: 20px;
+  background: var(--primary-color);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: bold;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+#section-tickets .item:hover .ul-check li {
+  color: white;
+  transform: translateX(5px);
+}
+
+/* Enhanced button styling */
+#section-tickets .item .btn-main {
+  margin-top: auto;
+  width: 100%;
+  padding: 18px 30px;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  border-radius: 50px;
+  background: linear-gradient(135deg, var(--primary-color) 0%, #ff6b6b 100%);
+  border: none;
+  color: white;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 25px rgba(var(--primary-color-rgb), 0.3);
+  flex-shrink: 0;
+  align-self: stretch;
+}
+
+#section-tickets .item .btn-main::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+  transition: left 0.5s;
+}
+
+#section-tickets .item .btn-main:hover::before {
+  left: 100%;
+}
+
+#section-tickets .item .btn-main:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 35px rgba(var(--primary-color-rgb), 0.4);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  #section-tickets .owl-carousel .item {
+    min-height: 600px;
+  }
+  
+  #section-tickets .d-ticket {
+    padding: 30px 20px 20px;
+  }
+  
+  #section-tickets .d-ticket h2 {
+    font-size: 28px;
+  }
+  
+  #section-tickets .d-ticket h4 {
+    font-size: 40px;
+  }
+  
+  #section-tickets .item > div:last-child {
+    padding: 20px;
+    min-height: 250px;
+  }
+  
+  #section-tickets .item .ul-check {
+    min-height: 140px;
+  }
+}
+/* Additional Card Enhancements */
+#section-tickets .item::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(255,255,255,0.02) 0%, transparent 50%, rgba(var(--primary-color-rgb), 0.02) 100%);
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+#section-tickets .item:hover::after {
+  opacity: 1;
+}
+
+/* Price highlight animation */
+#section-tickets .d-ticket h4 {
+  position: relative;
+  display: inline-block;
+}
+
+#section-tickets .d-ticket h4::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 2px;
+  background: var(--primary-color);
+  transition: width 0.3s ease;
+}
+
+#section-tickets .item:hover .d-ticket h4::after {
+  width: 100%;
+}
+
+/* Card glow effect on hover */
+#section-tickets .item:hover {
+  box-shadow: 
+    0 30px 60px rgba(0,0,0,0.4),
+    0 0 0 1px rgba(var(--primary-color-rgb), 0.3),
+    0 0 30px rgba(var(--primary-color-rgb), 0.2);
+}
+
+/* Staggered animation for features */
+#section-tickets .item .ul-check li {
+  opacity: 0.8;
+  transition: all 0.3s ease;
+}
+
+#section-tickets .item:hover .ul-check li:nth-child(1) { transition-delay: 0.1s; }
+#section-tickets .item:hover .ul-check li:nth-child(2) { transition-delay: 0.2s; }
+#section-tickets .item:hover .ul-check li:nth-child(3) { transition-delay: 0.3s; }
+#section-tickets .item:hover .ul-check li:nth-child(4) { transition-delay: 0.4s; }
+
+#section-tickets .item:hover .ul-check li {
+  opacity: 1;
+  transform: translateX(5px);
+}
+
+/* Enhanced logo styling in tickets */
+#section-tickets .d-ticket img[src*="logo.png"] {
+  filter: brightness(1.2) drop-shadow(0 2px 4px rgba(0,0,0,0.3));
+  transition: all 0.3s ease;
+}
+
+#section-tickets .item:hover .d-ticket img[src*="logo.png"] {
+  transform: scale(1.05);
+}
+
+/* Improved barcode styling */
+#section-tickets .d-ticket img[src*="barcode"] {
+  opacity: 0.6;
+  transition: opacity 0.3s ease;
+}
+
+#section-tickets .item:hover .d-ticket img[src*="barcode"] {
+  opacity: 0.8;
+}
+/* Force equal heights for all carousel items */
+#section-tickets .owl-stage {
+  display: flex;
+  align-items: stretch;
+}
+
+#section-tickets .owl-item {
+  display: flex;
+  align-items: stretch;
+  height: auto;
+}
+
+#section-tickets .owl-item .item {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Ensure consistent button positioning */
+#section-tickets .item > div:last-child {
+  position: relative;
+}
+
+#section-tickets .item .btn-main {
+  position: absolute;
+  bottom: 30px;
+  left: 30px;
+  right: 30px;
+  width: auto;
+}
+
+/* Adjust content padding to account for absolute positioned button */
+#section-tickets .item > div:last-child {
+  padding-bottom: 90px;
+}
+
+@media (max-width: 768px) {
+  #section-tickets .item .btn-main {
+    bottom: 20px;
+    left: 20px;
+    right: 20px;
+  }
+  
+  #section-tickets .item > div:last-child {
+    padding-bottom: 80px;
+  }
+}
+/* Force consistent button positioning */
+#section-tickets .owl-carousel .owl-stage {
+  display: flex;
+  align-items: stretch;
+}
+
+#section-tickets .owl-carousel .owl-item {
+  display: flex;
+  align-items: stretch;
+  height: auto;
+}
+
+#section-tickets .owl-carousel .item {
+  height: 100%;
+  min-height: 720px;
+}
+
+/* Ensure all cards have exactly the same structure */
+#section-tickets .item .relative {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  justify-content: space-between;
+}
+
+/* Button container positioning */
+#section-tickets .item .btn-main {
+  margin-top: auto !important;
+  flex-shrink: 0;
 }
